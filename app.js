@@ -1,12 +1,16 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import router from './routes/index';
+import cors from 'cors'
 //rodar toda aplicacao 
 let app = express();
 app.use(bodyParser.json());
+app.use(cors())
+
 //irei aceitar o tipo resgate e suas limitações
 app.use(bodyParser.urlencoded({extended:false}));
 app.use('/', router);
+
 //prende a aplicacao 
 //ao final da aplicacao princiapl a aplicacao fica
 //presa
