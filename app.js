@@ -11,6 +11,8 @@ app.use('/', router);
 //ao final da aplicacao princiapl a aplicacao fica
 //presa
 //app interage com router ...
-app.listen(3002, function(){
-  console.log('Ainda servidor Parada em execuacao ...');
-})
+// app.listen(3002, function(){
+//   console.log('Ainda servidor Parada em execuacao ...');
+// })
+
+app.listen(process.env.PORT || 4008)
